@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  
+  root "customers#index"
   devise_for :admins
   devise_for :customers
   resources :items
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :customers
+
+  namespace :admin do
+    resources :customers
+    resources :items
+  end
 end

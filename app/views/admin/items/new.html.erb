@@ -1,0 +1,20 @@
+new items!
+<p>create new items.</p>
+<%= form_for [:admin, @item_new] do |i| %>
+image_id
+<%= i.text_field :image_id %>
+singer_id
+<%= i.text_field :singer_id %>
+album
+<%= i.text_field :album %>
+price
+<%= i.text_field :price %>
+label
+<%= i.text_field :label_id %>
+genle
+<%= i.text_field :genle_id %>
+stock
+<%= i.text_field :stock %>
+
+<%= i.submit "create!" %>
+<%end %>
